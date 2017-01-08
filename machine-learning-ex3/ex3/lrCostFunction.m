@@ -38,9 +38,20 @@ grad = zeros(size(theta));
 
 
 
+%hypothesis
+h = sigmoid(X * theta);
 
+%cost
+J = 1 / m * sum(-y .* log(h) - (1 - y) .* log(1 - h)) + lambda / (2 * m) * sum(theta(2:end) .^ 2);
 
+%copy theta so can zero row
+zeroOutRow = theta;
 
+%zero row
+zeroOutRow(1) = 0;
+
+%compute gradient
+grad = 1 / m * (X' * (h - y) + lambda * zeroOutRow);
 
 
 

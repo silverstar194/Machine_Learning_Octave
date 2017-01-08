@@ -21,11 +21,20 @@ p = zeros(size(X, 1), 1);
 %       can use max(A, [], 2) to obtain the max for each row.
 %
 
+%layer on inputs
+a1 = X';
 
+%layer one times layer one weights with bias node row added
+a2 = sigmoid(Theta1 * [ones(1, size(a1, 2)); a1]);
 
+%layer two times layer two weights with bias node row added
+a3 = sigmoid(Theta2 * [ones(1, size(a2, 2)); a2]);
 
+%take max of each row and turn into col.
+[maxval, maxindices] = max(a3);
 
-
+%return col
+p = maxindices';
 
 
 
