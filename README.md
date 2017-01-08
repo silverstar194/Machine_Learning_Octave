@@ -1,12 +1,10 @@
 Machine Learning - Course Work
 by Stanford University
 
-Welcome to Machine Learning! I'm excited to have you in the class and look forward to helping you become an expert in machine learning.
+About this course: Machine learning is the science of getting computers to act without being explicitly programmed. In the past decade, machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome. Machine learning is so pervasive today that you probably use it dozens of times a day without knowing it. Many researchers also think it is the best way to make progress towards human-level AI. In this class, you will learn about the most effective machine learning techniques, and gain practice implementing them and getting them to work for yourself. More importantly, you'll learn about not only the theoretical underpinnings of learning, but also gain the practical know-how needed to quickly and powerfully apply these techniques to new problems. Finally, you'll learn about some of Silicon Valley's best practices in innovation as it pertains to machine learning and AI.
 
-After you finish watching the Week 1 lectures, there's also a set of Review Questions to help you check your understanding. You should be able to complete the review questions in a few minutes. You can attempt the review questions as many times as you like, and we will only use your highest score. 
+This course provides a broad introduction to machine learning, datamining, and statistical pattern recognition. Topics include: (i) Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels, neural networks). (ii) Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning). (iii) Best practices in machine learning (bias/variance theory; innovation process in machine learning and AI). The course will also draw from numerous case studies and applications, so that you'll also learn how to apply learning algorithms to building smart robots (perception, control), text understanding (web search, anti-spam), computer vision, medical informatics, audio, database mining, and other areas
 
-This machine learning class was the class that had started Coursera. I'm excited to be teaching it again. By the time you finish this class, you'll know how to apply the most advanced machine learning algorithms to such problems as anti-spam, image recognition, clustering, building recommender systems, and many other problems. You'll also know how to select the right algorithm for the right job, as well as become expert at 'debugging' and figuring out how to improve a learning algorithm's performance.
+https://www.coursera.org/learn/machine-learning
 
-I hope you'll have a lot of fun learning about machine learning. 
-
-Andrew Ng
+Taught by:    Andrew Ng, Associate Professor, Stanford University; Chief Scientist, Baidu; Chairman and Co-founder, Coursera
