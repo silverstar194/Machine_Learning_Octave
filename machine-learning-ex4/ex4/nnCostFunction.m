@@ -62,22 +62,45 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 
+% reformat y to Y
+I = eye(num_labels);
+Y = zeros(m, num_labels);
+for i=1:m
+  Y(i, :)= I(y(i), :);
+end
+
+% feedforward
+a1 = [ones(m, 1) X];
+a2 = [ones(size(a1*Theta1', 1), 1) sigmoid(a1*Theta1')];
+a3 = sigmoid(a2*Theta2');
+output = a3;
+
+% regularization term
+r = sum(sum(Theta1(:, 2:end).^2, 2))+sum(sum(Theta2(:, 2:end).^2, 2));
+
+% calculate J
+J = sum(sum((-Y).*log(output) - (1-Y).*log(1-output), 2))/m + lambda*r/(2*m);
 
 
+%output layer
+sigma3 = output - Y;
+
+%hidden layer
+sigma2 = (sigma3*Theta2).*sigmoidGradient([ones(size(a1*Theta1', 1), 1) (a1*Theta1')]);
+sigma2 = sigma2(:, 2:end);
+
+% accumulate gradients
+partialDer1 = (sigma2'*a1);
+partialDer2 = (sigma3'*a2);
 
 
+%grad regularization terms
+r1 = (lambda/m)*[zeros(size(Theta1, 1), 1) Theta1(:, 2:end)];
+r2 = (lambda/m)*[zeros(size(Theta2, 1), 1) Theta2(:, 2:end)];
 
-
-
-
-
-
-
-
-
-
-
-
+%combine terms
+Theta1_grad = partialDer1./m + r1;
+Theta2_grad = partialDer2./m + r2;
 
 
 % -------------------------------------------------------------
